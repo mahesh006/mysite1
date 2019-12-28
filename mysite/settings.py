@@ -25,7 +25,7 @@ SECRET_KEY = '_bh5z=022p30drdcwn(n@2-gk_ysmrn+t#rp*vlsm(%918pkmv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=[env('RENDER_EXTERNAL_HOSTNAME', default='')])
 
 
 # Application definition
